@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Customer Segmentation ML</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet"/>
+</head>
+<body>
+
+<nav class="navbar navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <i class="fas fa-users-cog me-2"></i> Customer Segmentation ML
+    </a>
+    <div>
+      <a href="/" class="btn btn-sm btn-outline-light me-2">
+        <i class="fas fa-home me-1"></i>Home
+      </a>
+      <a href="/about" class="btn btn-sm btn-light">
+        <i class="fas fa-info-circle me-1"></i>About
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-4">
+
+  <div class="hero-card text-center mb-4">
+    <div class="hero-icon">📚</div>
+    <h1 class="hero-title">How It Works</h1>
+    <p class="hero-subtitle">Understanding Unsupervised Learning & K-Means Clustering</p>
+  </div>
+
+  <!-- Supervised vs Unsupervised -->
+  <div class="card-custom mb-4">
+    <div class="card-header-custom"><i class="fas fa-balance-scale me-2"></i>Supervised vs Unsupervised Learning</div>
+    <div class="card-body p-4">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="concept-box supervised-box">
+            <h5>🌸 Supervised Learning (Iris)</h5>
+            <ul class="mt-3">
+              <li>Data has <strong>labels</strong> (Setosa, Versicolor, Virginica)</li>
+              <li>Model learns from examples</li>
+              <li>Goal: <strong>Predict</strong> the class</li>
+              <li>Algorithms: SVM, Decision Tree, KNN</li>
+              <li>Evaluation: Accuracy, Precision, Recall</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="concept-box unsupervised-box">
+            <h5>🛍️ Unsupervised Learning (This Project)</h5>
+            <ul class="mt-3">
+              <li>Data has <strong>NO labels</strong></li>
+              <li>Model finds patterns on its own</li>
+              <li>Goal: <strong>Discover</strong> hidden groups</li>
+              <li>Algorithms: K-Means, DBSCAN, Hierarchical</li>
+              <li>Evaluation: Silhouette Score, Elbow Method</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- K-Means Explained -->
+  <div class="card-custom mb-4">
+    <div class="card-header-custom"><i class="fas fa-cogs me-2"></i>How K-Means Algorithm Works</div>
+    <div class="card-body p-4">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-title">Initialize</div>
+            <div class="step-desc">Randomly place K centroids in the data space</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-title">Assign</div>
+            <div class="step-desc">Assign each data point to the nearest centroid</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-title">Update</div>
+            <div class="step-desc">Move each centroid to the mean of its assigned points</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-title">Repeat</div>
+            <div class="step-desc">Repeat steps 2–3 until centroids stop moving</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">5</div>
+            <div class="step-title">Converge</div>
+            <div class="step-desc">Algorithm converges to stable cluster assignments</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card highlight-step">
+            <div class="step-number">✓</div>
+            <div class="step-title">Predict</div>
+            <div class="step-desc">Assign new data to the nearest cluster centroid</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tech Stack -->
+  <div class="card-custom mb-4">
+    <div class="card-header-custom"><i class="fas fa-layer-group me-2"></i>Tech Stack</div>
+    <div class="card-body p-4">
+      <div class="row g-3 text-center">
+        <div class="col-4 col-md-2">
+          <div class="tech-badge">🐍<br/><small>Python</small></div>
+        </div>
+        <div class="col-4 col-md-2">
+          <div class="tech-badge">🔬<br/><small>Scikit-learn</small></div>
+        </div>
+        <div class="col-4 col-md-2">
+          <div class="tech-badge">🐼<br/><small>Pandas</small></div>
+        </div>
+        <div class="col-4 col-md-2">
+          <div class="tech-badge">📊<br/><small>Matplotlib</small></div>
+        </div>
+        <div class="col-4 col-md-2">
+          <div class="tech-badge">🌶️<br/><small>Flask</small></div>
+        </div>
+        <div class="col-4 col-md-2">
+          <div class="tech-badge">📓<br/><small>Colab</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Structure -->
+  <div class="card-custom mb-4">
+    <div class="card-header-custom"><i class="fas fa-folder-tree me-2"></i>Project Structure</div>
+    <div class="card-body p-4">
+      <pre class="code-block">customer_segmentation/
+│
+├── 📓 Customer_Segmentation_Training.ipynb   ← Train in Google Colab
+│
+├── 🌶️  app.py                                ← Flask application
+│
+├── 📁 model/
+│   ├── kmeans_model.pkl                      ← Trained K-Means model
+│   └── scaler.pkl                            ← StandardScaler
+│
+├── 📁 templates/
+│   ├── index.html                            ← Main page
+│   └── about.html                            ← This page
+│
+├── 📁 static/
+│   ├── css/style.css                         ← Styling
+│   └── js/main.js                            ← Frontend logic
+│
+└── 📄 requirements.txt                       ← Python dependencies</pre>
+    </div>
+  </div>
+
+  <div class="text-center mt-4">
+    <a href="/" class="btn btn-predict px-5">
+      <i class="fas fa-arrow-left me-2"></i>Try the Predictor
+    </a>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

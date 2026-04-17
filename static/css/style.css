@@ -1,0 +1,390 @@
+/* ───────────────────────────────────────────────────────
+   Customer Segmentation App — Stylesheet
+   ─────────────────────────────────────────────────────── */
+
+:root {
+  --primary: #4A90D9;
+  --secondary: #2C3E50;
+  --accent: #E67E22;
+  --success: #28B463;
+  --light-bg: #F4F6F9;
+}
+
+body {
+  background: var(--light-bg);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2C3E50;
+}
+
+/* ── Navbar ── */
+.navbar {
+  background: linear-gradient(135deg, #2C3E50 0%, #4A90D9 100%);
+  padding: .9rem 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .15);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* ── Hero ── */
+.hero-card {
+  background: linear-gradient(135deg, #2C3E50 0%, #4A90D9 100%);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  color: white;
+  box-shadow: 0 8px 30px rgba(74, 144, 217, .3);
+}
+
+.hero-icon {
+  font-size: 3.5rem;
+  margin-bottom: .5rem;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: .5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  opacity: .9;
+  margin: 0;
+}
+
+/* ── Compare Cards ── */
+.compare-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .07);
+  border: 2px solid #e0e0e0;
+  transition: all .2s;
+}
+
+.compare-card.active {
+  border-color: var(--primary);
+  box-shadow: 0 4px 20px rgba(74, 144, 217, .2);
+}
+
+.compare-card.supervised {
+  opacity: .7;
+}
+
+.compare-icon {
+  font-size: 2rem;
+  margin-bottom: .3rem;
+}
+
+.compare-label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--secondary);
+}
+
+.compare-example {
+  font-size: .85rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin: .2rem 0;
+}
+
+.compare-detail {
+  font-size: .8rem;
+  color: #666;
+}
+
+/* ── Cards ── */
+.card-custom {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .07);
+  border: none;
+  overflow: hidden;
+}
+
+.card-header-custom {
+  background: linear-gradient(135deg, #2C3E50, #4A90D9);
+  color: white;
+  padding: .9rem 1.4rem;
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+/* ── Sliders & Inputs ── */
+.form-range::-webkit-slider-thumb {
+  background: var(--primary);
+}
+
+.form-range::-moz-range-thumb {
+  background: var(--primary);
+}
+
+.form-range::-webkit-slider-runnable-track {
+  background: #dde;
+}
+
+.input-group-text {
+  background: #f8f9fa;
+  border-color: #dee2e6;
+}
+
+/* ── Buttons ── */
+.btn-predict {
+  background: linear-gradient(135deg, #4A90D9, #2C3E50);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: .75rem 1.5rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all .2s;
+}
+
+.btn-predict:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 144, 217, .4);
+  color: white;
+}
+
+.btn-predict:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.btn-example {
+  background: #f0f4ff;
+  border: 1px solid #c5d5f0;
+  border-radius: 8px;
+  padding: .35rem .75rem;
+  font-size: .82rem;
+  cursor: pointer;
+  transition: all .15s;
+  color: #333;
+}
+
+.btn-example:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* ── Result ── */
+.result-cluster {
+  animation: fadeInUp .4s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-emoji {
+  font-size: 4rem;
+  margin-bottom: .5rem;
+}
+
+.result-name {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: .5rem;
+}
+
+.result-cluster-badge {
+  display: inline-block;
+  padding: .3rem .9rem;
+  border-radius: 20px;
+  font-size: .85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.result-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .7rem;
+  margin: 1rem 0;
+}
+
+.info-chip {
+  background: #f4f6f9;
+  border-radius: 8px;
+  padding: .5rem .8rem;
+  font-size: .85rem;
+}
+
+.info-chip strong {
+  display: block;
+  font-size: .75rem;
+  color: #888;
+}
+
+.strategy-box {
+  background: linear-gradient(135deg, #f0f7ff, #e8f4e8);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: .88rem;
+  border-left: 4px solid var(--primary);
+}
+
+.distance-bar-wrap {
+  margin-top: 1rem;
+}
+
+.distance-bar-item {
+  margin-bottom: .4rem;
+  font-size: .8rem;
+}
+
+.d-bar {
+  height: 8px;
+  border-radius: 4px;
+  background: #e0e0e0;
+  overflow: hidden;
+}
+
+.d-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width .6s ease;
+}
+
+/* ── Empty State ── */
+.empty-state {
+  padding: 2rem;
+}
+
+/* ── Segment Cards ── */
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.segment-card {
+  background: white;
+  border-radius: 10px;
+  padding: .9rem 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  transition: transform .15s;
+}
+
+.segment-card:hover {
+  transform: translateY(-2px);
+}
+
+.segment-emoji {
+  font-size: 1.4rem;
+}
+
+.segment-name {
+  font-weight: 700;
+  font-size: .9rem;
+  line-height: 1.2;
+}
+
+.segment-desc {
+  font-size: .78rem;
+  color: #777;
+}
+
+.concept-card {
+  border-left: 4px solid var(--accent) !important;
+}
+
+/* ── About Page ── */
+.concept-box {
+  border-radius: 10px;
+  padding: 1.2rem;
+  height: 100%;
+}
+
+.supervised-box {
+  background: #fff8f0;
+  border: 1px solid #fce3c0;
+}
+
+.unsupervised-box {
+  background: #f0fff4;
+  border: 1px solid #b7e3c5;
+}
+
+.step-card {
+  background: #f8f9ff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #e0e8ff;
+  height: 100%;
+}
+
+.highlight-step {
+  background: #e8f4e8;
+  border-color: #b7e3c5;
+}
+
+.step-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.step-title {
+  font-weight: 700;
+  margin: .3rem 0;
+}
+
+.step-desc {
+  font-size: .82rem;
+  color: #666;
+}
+
+.tech-badge {
+  background: white;
+  border-radius: 10px;
+  padding: .8rem .5rem;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+}
+
+.tech-badge small {
+  font-size: .72rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.code-block {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  border-radius: 8px;
+  padding: 1.2rem;
+  font-size: .85rem;
+  overflow-x: auto;
+}
+
+/* ── Spinner ── */
+.spinner-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
