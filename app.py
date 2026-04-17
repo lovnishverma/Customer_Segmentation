@@ -2,12 +2,6 @@
 Customer Segmentation Flask App
 ================================
 Unsupervised ML Deployment using K-Means Clustering
-Train the model first using the Colab notebook, then run this app.
-
-Usage:
-    python app.py
-
-Then open: http://127.0.0.1:5000
 """
 
 from flask import Flask, render_template, request, jsonify
@@ -28,7 +22,9 @@ try:
     scaler = joblib.load(SCALER_PATH)
     print("✅ Model and scaler loaded successfully!")
 
+    # ---------------------------------------------------------
     # DYNAMIC CLUSTER MAPPING (Global Optimal Match)
+    # ---------------------------------------------------------
     # 1. Get the actual cluster centers in their original scale
     centroids = scaler.inverse_transform(kmeans.cluster_centers_)
     
